@@ -1,0 +1,11 @@
+### 网关测试接口
+GET {{gateway_host}}/api/name/get?name=ming
+Content-Type: application/json
+
+
+
+
+
+
+
+
