@@ -1,9 +1,10 @@
 package com.ming.mingapiinterface.controller;
 
 import com.ming.mingapiclientsdk.model.User;
-import com.ming.mingapiclientsdk.utils.SignUtils;
+import com.ming.mingapiinterface.mapper.ApiStoryMapper;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -15,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/name")
 public class NameController {
+
+    @Resource
+    private ApiStoryMapper apiStoryMapper;
 
     @GetMapping("/get")
     public String getNameByGet(String name) {
@@ -28,7 +32,6 @@ public class NameController {
 
     @PostMapping("/json")
     public String getUserNameByPost(@RequestBody User user, HttpServletRequest request) {
-        System.out.println("小飞棍来咯");
-        return "POST 用户名字是 " + user.getUsername();
+        return "随机返回一条趣味故事：" + apiStoryMapper.getOneByRandom();
     }
 }

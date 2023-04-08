@@ -7,4 +7,5 @@ package com.ming.mingapiinterface.aop;
  * @date 2023/3/31 22:19
  */
 public class InvokeCountAOP {
+
 }

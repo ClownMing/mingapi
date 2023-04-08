@@ -31,7 +31,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String sayHello2(String name) {
-        return "yupi";
+        return "mingapi项目dubbo测试成功";
     }
 
 
